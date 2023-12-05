@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Estetika</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="market">Market</string>
+    <string name="profile">Profile</string>
+    <string name="batik_destination">Batik Destination</string>
+    <string name="title_scan">Scan</string>
+    <string name="new_to_story">New to Story?</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="img_placeholder">Image Placeholder</string>
+    <string name="login_title">Yuk Login</string>
+    <string name="login_message">Jelajahi semua pengalaman dan cerita siswa saat belajar di Dicoding, dan tentu saja Kamu juga bisa berbagi cerita Kamu di sini✍️</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_title">Ayok bikin akun</string>
+    <string name="full_name">Full name</string>
+    <string name="et_email_error_message">Email address is not valid</string>
+    <string name="et_password_error_message">Password minimal harus 8 karakter</string>
+    <string name="registration_error_message">Registration failed, please try again.</string>
+    <string name="registration_success">Registration success</string>
+    <string name="login_error_message">Login failed, please try again.</string>
+    <string name="login_success_message">Login success</string>
+    <string name="dummy_name" translatable="false">John Doe</string>
+    <string name="dummy_description" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eros arcu, lacinia in ligula ac, imperdiet blandit arcu.</string>
+    <string name="dummy_date" translatable="false">21 Juli 2017</string>
+    <string name="story_s_illustration">Story\'s illustration</string>
+    <string name="stories">Stories</string>
+    <string name="logout">Logout</string>
+    <string name="create_story">Create story</string>
+    <string name="error_occurred_message">An error occurred</string>
+    <string name="story_illustration">Story illustration</string>
+    <string name="detail_toolbar_title">%s\'s story</string>
+    <string name="no_data">No data</string>
+    <string name="stories_not_found_error">Stories not found</string>
+    <string name="add_story_title">Add Story</string>
+    <string name="upload_story">Upload Story</string>
+    <string name="person_with_computer">Person with computer</string>
+    <string name="select_image">Select image from</string>
+    <string name="select_from_camera">Camera</string>
+    <string name="select_from_gallery">Gallery</string>
+    <string name="write_a_description">Write a description</string>
+    <string name="desc_empty_field_error">Please fill the description field</string>
+    <string name="empty_image_error">Please select an image</string>
+    <string name="image_upload_failed">Story upload failed</string>
+    <string name="story_upload">Story uploaded</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="solemn">image desc</string>
+    <string name="name">Username</string>
+    <string name="username">username</string>
+    <string name="title_welcome_page">Selamat Datang di Dicoding Story!!</string>
+    <string name="message_welcome_page">Silakan Register jika belum mempunyai akun. Jika sudah punya, silakan login</string>
+    <string name="title_activity_story_location">StoryLocationActivity</string>
+    <string name="story_loc">Story Location</string>
+    <string name="retry">coba lagi</string>
+    <string name="location_permission_denied">Location permission not allowed</string>
+    <string name="location_permission_denied_action">Change Setting</string>
+    <string name="share_location">Share location</string>
+    <string name="message_no_location">Please activate your location services</string>
+    <string name="title_scan_batik">Scan Batik</string>
+    <string name="select">Select</string>
+    <string name="predict_image">Predict</string>
+    <string name="add_image">Tambah</string>
+    <string name="already_have_an_account">Already have an account?</string>
+</resources>

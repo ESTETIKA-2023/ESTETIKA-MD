@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="120dp"
+    android:layout_height="180dp">
+
+    <ImageView
+        android:id="@+id/tvShopImage"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/add_image" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvShopTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="@string/dummy_name" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvShopPrice"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stories"/>
+
+</LinearLayout>

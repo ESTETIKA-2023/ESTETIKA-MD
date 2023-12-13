@@ -1,6 +1,7 @@
 package com.bangkit23.estetika.data
 
 import com.bangkit23.estetika.data.model.BatikArticle
+import com.bangkit23.estetika.data.model.BatikItem
 import com.bangkit23.estetika.data.model.BatikTourism
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
@@ -10,7 +11,35 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import javax.inject.Inject
 
+
 class StorageRepository @Inject constructor(private val db: FirebaseFirestore) {
+
+    var docRef = db.collection("batik_shop").document("jenis_batik")
+
+    fun getShopItems(batikCollection: String): Flow<Resources<List<BatikItem>>> = callbackFlow {
+        var snapshotStateListener: ListenerRegistration? = null
+
+        try {
+            snapshotStateListener = docRef.collection(batikCollection)
+                .addSnapshotListener { snapshot, e ->
+                    val response = if (snapshot != null) {
+                        val terms = snapshot.toObjects(BatikItem::class.java)
+                        Resources.Success(data = terms)
+                    } else {
+                        Resources.Error(throwable = e?.cause)
+                    }
+                    trySend(response)
+                }
+
+        } catch (e: Exception) {
+            trySend(Resources.Error(e.cause))
+            e.printStackTrace()
+        }
+
+        awaitClose {
+            snapshotStateListener?.remove()
+        }
+    }
 
     fun getBatikTourism(): Flow<Resources<List<BatikTourism>>> = callbackFlow {
         var snapshotStateListener: ListenerRegistration? = null

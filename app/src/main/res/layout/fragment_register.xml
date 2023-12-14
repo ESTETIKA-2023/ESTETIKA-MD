@@ -6,29 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".ui.register.RegisterFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="bg"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg_batik_blue" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline2"
+                android:id="@+id/horizontal_guideline_top"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal_guideline_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.30191082"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:contentDescription="@string/solemn"
-                app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
+                app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_bottom"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline"
+                app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_top"
                 app:srcCompat="@drawable/web_search" />
 
             <TextView
@@ -36,112 +61,81 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
                 android:text="@string/register_title"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_bottom"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
-
-            <TextView
-                android:id="@+id/nameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/name"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+                app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_top" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/nameEditTextLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/il_email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="64dp"
                 android:layout_marginEnd="32dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView"
-                app:startIconDrawable="@drawable/baseline_person_24">
+                app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_bottom">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ed_register_name"
+                    android:id="@+id/ed_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:ems="10"
-                    android:inputType="text" />
+                    android:hint="Email"
+                    android:inputType="text"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/emailTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/email"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout" />
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/emailEditTextLayout"
+                android:id="@+id/il_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-                app:startIconDrawable="@drawable/ic_baseline_email_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ed_register_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:ems="10"
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/passwordTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/password"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordEditTextLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
-                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+                app:layout_constraintTop_toBottomOf="@+id/il_email">
 
-                <com.bangkit23.estetika.view.PasswordEditText
-                    android:id="@+id/ed_register_password"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_confirm_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/il_password">
+
+                <com.bangkit23.estetika.view.PasswordEditText
+                    android:id="@+id/ed_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Confirm Password"
                     android:textColor="@color/LTR"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:inputType="textPassword" />
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -155,16 +149,9 @@
                 android:text="@string/register"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/il_confirm_password" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineHorizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="64dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintGuide_percent="0.30191082"
-                app:layout_constraintStart_toStartOf="parent" />
+
 
             <LinearLayout
                 android:id="@+id/btn_login"
@@ -189,6 +176,8 @@
                     android:textColor="@color/purple_200" />
 
             </LinearLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

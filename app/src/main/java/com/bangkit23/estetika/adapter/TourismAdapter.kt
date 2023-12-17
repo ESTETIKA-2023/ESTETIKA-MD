@@ -35,6 +35,7 @@ class TourismAdapter : ListAdapter<BatikTourism, TourismAdapter.TourismViewHolde
                     .into(rvTourismImage)
                 tvTourismTitle.text = tourism.name
                 tvTourismLocation.text = tourism.province
+                tvTourismPrice.text = tourism.price
             }
         }
     }

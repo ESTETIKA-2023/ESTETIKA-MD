@@ -9,6 +9,4 @@ data class BatikTourism(
     @get:PropertyName("Nama Atraksi") @set:PropertyName("Nama Atraksi") var name: String? = null,
     @get:PropertyName("Price") @set:PropertyName("Price") var price: String? = null,
     @get:PropertyName("Province") @set:PropertyName("Province") var province: String? = null
-) {
-    constructor() : this(null, null, null, null, null, null)
-}
+)

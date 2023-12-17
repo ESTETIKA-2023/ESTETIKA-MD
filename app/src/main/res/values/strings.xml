@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Estetika</string>
+    <string name="app_name">ESTETIKA</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -10,7 +10,6 @@
     <string name="dont_have_an_account_yet">Don’t have an account yet?</string>
     <string name="register"><u>Register</u></string>
     <string name="new_to_estetika">Don\'t have an account yet?</string>
-    <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="img_placeholder">Image Placeholder</string>
     <string name="login_title">ESTETIKA</string>
@@ -68,4 +67,32 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="estetika_label">ESTETIKA</string>
     <string name="jenis_batik">Batik Sogan</string>
+    <string name="title_batik">Name of Batik</string>
+    <string name="batik_description">Batik Description</string>
+    <string name="home_title_article">Article Type of Batik</string>
+    <string name="see_all">See All</string>
+    <string name="bg_layout">background image</string>
+    <string name="top_home_title">Hello, ESTETIKA!</string>
+    <string name="top_home_desc">A beautiful day to explore!</string>
+    <string name="batik_shop">Batik Shop</string>
+    <string name="batik_tourism">Batik Tourism</string>
+    <string name="bottom_home_desc">Look for tourist attractions around you!</string>
+    <string name="home_content">Home content</string>
+    <string name="price">Price</string>
+    <string name="tourism_title">Find the place. Get there.</string>
+    <string name="batik_catalog">Batik Catalog</string>
+    <string name="buy_now">Buy</string>
+    <string name="batik_shop_title">Batik Shop</string>
+    <string name="batik_shop_desc">Choose your batik and buy it now</string>
+    <string name="view_video">LIHAT VIDEO</string>
+    <string name="cara_buat_batik">Lihat Cara Pembuatan Batik</string>
+    <string name="province_loc">Asal :</string>
+    <string name="motif_m">Arti motif :</string>
+    <string name="recommends_batik">Batik recommendations for you</string>
+    <string name="related_place">Here are some related place</string>
+    <string name="version">Version</string>
+    <string name="app_ver">v 1.0</string>
+    <string name="setting">Setting</string>
+    <string name="about_us">About Us</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit23.estetika.adapter.TourismAdapter
 import com.bangkit23.estetika.data.Resources
@@ -39,8 +40,8 @@ class BatikDestinationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = TourismAdapter()
-        val llm = LinearLayoutManager(requireContext())
-        llm.orientation = LinearLayoutManager.VERTICAL
+        val llm = GridLayoutManager(requireContext(), 2)
+//        llm.orientation = LinearLayoutManager.VERTICAL
         binding?.rvTourism?.layoutManager = llm
         binding?.rvTourism?.adapter = adapter
 

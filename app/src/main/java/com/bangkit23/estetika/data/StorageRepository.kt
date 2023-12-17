@@ -3,16 +3,20 @@ package com.bangkit23.estetika.data
 import com.bangkit23.estetika.data.model.BatikArticle
 import com.bangkit23.estetika.data.model.BatikItem
 import com.bangkit23.estetika.data.model.BatikTourism
+import com.bangkit23.estetika.data.remote.response.UploadFileResponse
+import com.bangkit23.estetika.data.remote.retrofit.ApiService
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.Query
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.flow
+import okhttp3.MultipartBody
 import javax.inject.Inject
 
 
-class StorageRepository @Inject constructor(private val db: FirebaseFirestore) {
+class StorageRepository @Inject constructor(private val db: FirebaseFirestore, private val apiService: ApiService) {
 
     var docRef = db.collection("batik_shop").document("jenis_batik")
 
@@ -89,6 +93,24 @@ class StorageRepository @Inject constructor(private val db: FirebaseFirestore) {
         awaitClose {
             snapshotStateListener?.remove()
         }
+    }
+
+    suspend fun uploadImage(
+        token: String,
+        file: MultipartBody.Part
+    ): Flow<Result<UploadFileResponse>> = flow {
+        try {
+            val bearerToken = generateBearerToken(token)
+            val response = apiService.predictImage(bearerToken, file)
+            emit(Result.success(response))
+        } catch (e: Exception) {
+            e.printStackTrace()
+            emit(Result.failure(e))
+        }
+    }
+
+    private fun generateBearerToken(token: String): String {
+        return "Bearer $token"
     }
 
     companion object {

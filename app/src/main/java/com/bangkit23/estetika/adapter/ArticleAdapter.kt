@@ -1,5 +1,6 @@
 package com.bangkit23.estetika.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit23.estetika.data.model.BatikArticle
 import com.bangkit23.estetika.databinding.ItemArticleBinding
+import com.bangkit23.estetika.ui.detailarticle.ArticleDetailActivity
 import com.bumptech.glide.Glide
 
 class ArticleAdapter: ListAdapter<BatikArticle, ArticleAdapter.ArticleViewHolder>(ArticleDiffCallback()) {
@@ -19,6 +21,11 @@ class ArticleAdapter: ListAdapter<BatikArticle, ArticleAdapter.ArticleViewHolder
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         val articles = getItem(position)
         holder.bind(articles)
+        holder.itemView.setOnClickListener {
+            val moveWithObjectIntent = Intent(holder.itemView.context, ArticleDetailActivity::class.java)
+            moveWithObjectIntent.putExtra(ArticleDetailActivity.EXTRA_ARTICLE, articles)
+            holder.itemView.context.startActivity(moveWithObjectIntent)
+        }
     }
 
     class ArticleViewHolder(private val binding: ItemArticleBinding): RecyclerView.ViewHolder(binding.root) {

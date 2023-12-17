@@ -7,19 +7,9 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_explore"
-        android:icon="@drawable/baseline_place_24"
-        android:title="@string/batik_destination" />
-
-    <item
         android:id="@+id/navigation_scan"
         android:icon="@drawable/baseline_camera_24"
         android:title="@string/title_scan" />
-
-    <item
-        android:id="@+id/navigation_market"
-        android:icon="@drawable/baseline_storefront_24"
-        android:title="@string/market" />
 
     <item
         android:id="@+id/navigation_profile"

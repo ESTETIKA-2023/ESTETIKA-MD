@@ -6,14 +6,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.destination.BatikDestinationFragment">
 
+    <ImageView
+        android:id="@+id/destinationBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/bg_layout"
+        app:srcCompat="@drawable/bg_batik_putih"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTourism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/tourism_title"
+        android:textSize="20sp"
+        android:textColor="@color/btn_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/destinationBackground" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTourism"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
         tools:listitem="@layout/item_tourism"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTourism" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

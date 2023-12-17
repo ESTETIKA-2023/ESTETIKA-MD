@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="150dp"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:padding="16dp"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="10dp">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="10dp">
 
-        <TextView
-            android:id="@+id/tvArticleTitle"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/jenis_batik"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_weight="2"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvArticleDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/dummy_description"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvArticleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="@string/jenis_batik"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvArticleDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:maxLines="4"
+                android:text="@string/batik_description"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/tvArticleImage"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars"
+            card_view:shapeAppearanceOverlay="@style/RoundedSquare"
+            android:contentDescription="@string/dummy_name" />
+
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/tvArticleImage"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_weight="2"
-        android:padding="12dp"
-        android:contentDescription="@string/dummy_name"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerCrop"
-        tools:src="@tools:sample/avatars" />
-</LinearLayout>
+</androidx.cardview.widget.CardView>

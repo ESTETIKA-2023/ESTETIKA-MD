@@ -1,33 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
-    android:layout_height="250dp"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="10dp">
 
-    <ImageView
-        android:id="@+id/rvTourismImage"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        tools:src="@drawable/estetika_logo"
-        android:contentDescription="@string/select_image" />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvTourismTitle"
-        android:text="@string/title_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/rvTourismImage"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:contentDescription="@string/add_image"
+            tools:src="@tools:sample/avatars"
+            android:scaleType="centerCrop" />
 
-    <TextView
-        android:id="@+id/tvTourismLocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/stories"
-        android:layout_marginTop="16dp"
-        android:textSize="11sp" />
+        <TextView
+            android:id="@+id/tvTourismTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="@string/home_content"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvTourismLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:text="@string/batik_description"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvTourismPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:text="@string/price"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

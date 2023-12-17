@@ -15,14 +15,27 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/estetika_logo"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/estetika_logo"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Estetika"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.market.BatikShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.destination.BatikTourismActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detailarticle.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.article.ArticleActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.AuthActivity"
@@ -31,10 +44,7 @@
             android:name=".ui.scanresult.ScanResultActivity"
             android:exported="false" />
         <activity
-            android:name=".SideActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -53,6 +63,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -13,6 +13,18 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/loginBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/bg_batik_putih"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/bg_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -27,7 +39,7 @@
                 android:id="@+id/titleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="-16dp"
                 android:text="@string/estetika_label"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -45,7 +57,9 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginTop="80dp"
-                android:hint="Username"
+                app:boxStrokeColor="@color/navy"
+                android:hint="@string/email"
+                android:textColorHint="@color/navy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titleTextView">
@@ -54,6 +68,7 @@
                     android:id="@+id/ed_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/navy"
                     android:ems="10"
                     android:textSize="15sp"
                     android:inputType="textEmailAddress"
@@ -68,7 +83,9 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginTop="25dp"
-                android:hint="Password"
+                app:boxStrokeColor="@color/navy"
+                android:hint="@string/password"
+                android:textColorHint="@color/navy"
                 app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +95,7 @@
                     android:id="@+id/ed_login_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/navy"
                     android:ems="10"
                     android:textSize="15sp"
                     android:inputType="textPassword"
@@ -91,7 +109,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/navy"
+                android:backgroundTint="@color/btn_color"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -128,6 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:textColor="@color/navy"
                     android:text="@string/register" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

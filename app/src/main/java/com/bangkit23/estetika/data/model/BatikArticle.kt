@@ -1,7 +1,10 @@
 package com.bangkit23.estetika.data.model
 
+import android.os.Parcelable
 import com.google.firebase.firestore.PropertyName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class BatikArticle(
     @get:PropertyName("arti_motif") @set:PropertyName("arti_motif") var arti_motif: String? = null,
     @get:PropertyName("asal") @set:PropertyName("asal") var asal: String? = null,
@@ -12,6 +15,4 @@ data class BatikArticle(
     @get:PropertyName("link_proses_pembuatan") @set:PropertyName("link_proses_pembuatan") var link_proses_pembuatan: String? = null,
     @get:PropertyName("name") @set:PropertyName("name") var name: String? = null,
     @get:PropertyName("teknik_pembuatan") @set:PropertyName("teknik_pembuatan") var teknik_pembuatan: List<String>? = null
-) {
-    constructor(): this(null, null, null, null, null, null, null, null, null)
-}
+) : Parcelable

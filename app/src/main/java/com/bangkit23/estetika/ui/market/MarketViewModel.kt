@@ -13,7 +13,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MarketViewModel @Inject constructor(private val repo: StorageRepository) : ViewModel() {
-    // TODO: Implement the ViewModel
 
     private val _uiState = MutableStateFlow<ShopUiState?>(null)
     val uiState: StateFlow<ShopUiState?> = _uiState

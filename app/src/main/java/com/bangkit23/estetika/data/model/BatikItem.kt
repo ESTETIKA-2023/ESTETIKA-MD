@@ -8,6 +8,3 @@ data class BatikItem (
     @get:PropertyName("Link") @set:PropertyName("Link") var link: String? = null,
     @get:PropertyName("Nama") @set:PropertyName("Nama") var nama: String? = null
 )
-{
-    constructor(): this(null, null, null, null)
-}

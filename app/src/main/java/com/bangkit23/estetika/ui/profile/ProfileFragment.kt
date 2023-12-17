@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.bangkit23.estetika.databinding.FragmentProfileBinding
 import com.bangkit23.estetika.ui.auth.AuthActivity
@@ -27,12 +28,15 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.logoutButton.setOnClickListener {
-            viewModel.logout()
+        binding.logoutBtn.setOnClickListener {
+            viewModel.saveAuthToken("")
             Intent(requireContext(), AuthActivity::class.java).also { intent ->
                 startActivity(intent)
                 requireActivity().finish()
             }
+        }
+        binding.editProfileBtn.setOnClickListener {
+            Toast.makeText(requireContext(), "Fitur ini masih dalam progress", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -7,20 +7,10 @@
 ESTETIKA is a cultural exploration platform on a mission to unravel the enchanting world of Indonesian batik. Our vision is to not only promote the beauty of batik but also to contribute to the growth of tourism in regions celebrated for their unique batik heritage. By harnessing cutting-edge technologies, such as AI, our goal is to revolutionize the way we appreciate and engage with this traditional art form.
 
 ## Table of Contents
-- [Architecture](#architecture)
 - [Requirements](#requirements)
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
 - [Features](#features)
-
-## Architecture
-The project follows the MVVM (Model-View-ViewModel) design pattern with a Clean Architecture approach. This architecture promotes separation of concerns and provides a scalable and maintainable codebase. Here's an overview of the project's architecture:
-
-- **Presentation Layer**: Contains the UI components, including activities, fragments, and Jetpack Compose screens. It interacts with the ViewModel layer to retrieve and display data to the user.
-
-- **Domain Layer**: Contains the business logic of the application. It defines the various use cases and orchestrates the interactions between the data layer and the presentation layer.
-
-- **Data Layer**: Contains the repositories and data sources responsible for retrieving and persisting data. It abstracts the underlying data storage implementation and provides a clean interface for the Use Case layer.
 
 ## Requirements
 To build and run the ESTETIKA Android application, ensure you have the following software installed:

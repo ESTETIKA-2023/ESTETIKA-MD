@@ -68,13 +68,10 @@ Feel free to explore the codebase and make any contributions or improvements as 
 The ESTETIKA Android application offers the following key features:
 
 - User authentication using Firebase Auth, allowing users to create accounts and securely log in.
-- Seamless image loading and caching with Coil Compose, ensuring fast and efficient image rendering within the app.
 - Dependency injection with Dagger Hilt, promoting modularity and testability of the codebase.
 - Camera functionality using Camera X, enabling users to capture and work with photos within the app.
 - Integration of TensorFlow Lite for incorporating machine learning models, providing batik detection.
-- Data storage and retrieval with Room, offering a reliable and efficient database solution for managing app data.
 - Network requests and API interactions facilitated by Retrofit, ensuring seamless communication with backend services.
 - Asynchronous data handling with Kotlin Flow, allowing for responsive and reactive programming.
-- Media playback using ExoPlayer, providing a powerful and customizable media player for playing audio content within the app.
 
 Please refer to the codebase and documentation for more detailed information on each feature.

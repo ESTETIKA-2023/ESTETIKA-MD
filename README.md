@@ -36,24 +36,17 @@ To build and run the ESTETIKA Android application, ensure you have the following
 ## Dependencies
 The project utilizes several libraries and frameworks to enhance its functionality. Here are the key dependencies:
 
-- [Material 3](https://m3.material.io/): Provides a modern and consistent design system for the app's UI, ensuring a visually appealing user experience.
-
 - [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=CjwKCAjwg-GjBhBnEiwAMUvNW3yzekVX4nip-iL9Zw-ANUPQ_4eFDIJ0NU5Do0dTMhZCX6caIh3J8BoCdgoQAvD_BwE&gclsrc=aw.ds&hl=id): Enables building the UI using a declarative and efficient approach, allowing for flexible and responsive user interfaces.
 
 - [Firebase Auth](https://firebase.google.com/docs/auth/android/google-signin?hl=id): Provides authentication and Google Sign-In capabilities, ensuring secure user authentication and access to app features.
 
-- [Google Play Services](https://developers.google.com/android/guides/setup): Offers additional services and APIs for integrating with various Google features, enhancing the app's functionality and user experience.
+- [Dagger Hilt](https://dagger.dev/hilt/): A dependency injection framework that simplifies the management of dependencies in the app, promoting modularity and testability. 
 
-- [Coil Compose](https://coil-kt.github.io/coil/compose/): A Kotlin-first image loading library for handling image loading and caching within Compose UI, enabling efficient and seamless image loading.
+- [Camera X](https://developer.android.com/jetpack/androidx/releases/camera?hl=id): Provides a modern API for accessing the device's camera functionalities, allowing the app to capture photos seamlessly.
 
-- [Dagger Hilt](https://dagger.dev/hilt/): A dependency injection framework that simplifies the management of dependencies in the app, promoting modularity and testability.
-Apologies for the cutoff. Here's the rest of the information:
-
-- [Camera X](https://developer.android.com/jetpack/androidx/releases/camera?hl=id): Provides a modern API for accessing the device's camera functionalities, allowing the app to capture photos and videos seamlessly.
-
-- [Tensorflow Lite (TFLite)](https://www.tensorflow.org/lite/android/quickstart): Enables the integration of machine learning models in the app using TensorFlow Lite, empowering the app with advanced ML capabilities for tasks such as image recognition or health analysis.
-
-- [Room](https://developer.android.com/training/data-storage/room?hl=id): Offers a convenient and robust way to work with a SQLite database on Android, allowing efficient storage and retrieval of app data.
+- [Tensorflow Lite (TFLite)](https://www.tensorflow.org/lite/android/quickstart): Enables the integration of machine learning models in the app using TensorFlow Lite, empowering the app with advanced ML capabilities for tasks such as image recognition.
+  
+- [Google Analytics](https://developers.google.com/analytics/solutions/mobile): Offers app measurement solution, provides insight on app usage and user engagement.
 
 - [Retrofit](https://square.github.io/retrofit/): A type-safe HTTP client for making network requests and interacting with RESTful APIs, facilitating seamless communication with backend services.
 

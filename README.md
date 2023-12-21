@@ -15,26 +15,20 @@ ESTETIKA is a cultural exploration platform on a mission to unravel the enchanti
 ## Requirements
 To build and run the ESTETIKA Android application, ensure you have the following software installed:
 
-- Android Studio: 2022.2.1 (Flamingo)
-- Minimum SDK: 21
-- Target SDK: 33
-- JDK: 17
-- Kotlin: 1.7.20
-- Android Gradle Plugin: 8.1.0
+- Android Studio: 2022.3.1 (Giraffe)
+- Minimum SDK: 24
+- Target SDK: 34
+- JDK: 1.8
+- Kotlin: 1.9.0
+- Android Gradle Plugin: 8.1.4
 - Gradle: 8.0
 
 ## Dependencies
 The project utilizes several libraries and frameworks to enhance its functionality. Here are the key dependencies:
 
-- [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=CjwKCAjwg-GjBhBnEiwAMUvNW3yzekVX4nip-iL9Zw-ANUPQ_4eFDIJ0NU5Do0dTMhZCX6caIh3J8BoCdgoQAvD_BwE&gclsrc=aw.ds&hl=id): Enables building the UI using a declarative and efficient approach, allowing for flexible and responsive user interfaces.
-
-- [Firebase Auth](https://firebase.google.com/docs/auth/android/google-signin?hl=id): Provides authentication and Google Sign-In capabilities, ensuring secure user authentication and access to app features.
+- [Firebase Firestore](https://firebase.google.com/docs/firestore): A flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud.
 
 - [Dagger Hilt](https://dagger.dev/hilt/): A dependency injection framework that simplifies the management of dependencies in the app, promoting modularity and testability. 
-
-- [Camera X](https://developer.android.com/jetpack/androidx/releases/camera?hl=id): Provides a modern API for accessing the device's camera functionalities, allowing the app to capture photos seamlessly.
-
-- [Tensorflow Lite (TFLite)](https://www.tensorflow.org/lite/android/quickstart): Enables the integration of machine learning models in the app using TensorFlow Lite, empowering the app with advanced ML capabilities for tasks such as image recognition.
   
 - [Google Analytics](https://developers.google.com/analytics/solutions/mobile): Offers app measurement solution, provides insight on app usage and user engagement.
 
@@ -48,9 +42,7 @@ To build and run the project locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/ESTETIKA-2023/ESTETIKA-MD.git`
 2. Open the project in Android Studio.
 3. Ensure that the required SDK versions and dependencies are installed.
-4. Add your own `google-services.json` file to the project. This file is required for Firebase integration. You can obtain this file by creating a new Firebase project and enabling Firebase Authentication.
-5. Add `BASE_URL=https://hidup-sehat-api-oppougulda-as.a.run.app/v1/` to `local.properties` file.
-6. Build and run the app on an emulator or physical device.
+4. Build and run the app on an emulator or physical device.
 
 Feel free to explore the codebase and make any contributions or improvements as needed. We appreciate your contributions to ESTETIKA!
 

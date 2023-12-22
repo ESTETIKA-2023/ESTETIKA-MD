@@ -49,11 +49,11 @@ Feel free to explore the codebase and make any contributions or improvements as 
 ## Features
 The ESTETIKA Android application offers the following key features:
 
-- User authentication using Firebase Auth, allowing users to create accounts and securely log in.
+- User authentication using ESTETIKA-API, allowing users to create accounts and securely log in.
 - Dependency injection with Dagger Hilt, promoting modularity and testability of the codebase.
-- Camera functionality using Camera X, enabling users to capture and work with photos within the app.
-- Integration of TensorFlow Lite for incorporating machine learning models, providing batik detection.
-- Network requests and API interactions facilitated by Retrofit, ensuring seamless communication with backend services.
+- Camera and gallery functionality, enabling users to pick or capture an image within the app.
+- Integration of Firebase Firestore, providing a flexible, scalable database for mobile.
+- Network requests and API interactions facilitated by Retrofit, ensuring seamless communication with backend services. ESTETIKA-API is used for authentication and image prediction.
 - Asynchronous data handling with Kotlin Flow, allowing for responsive and reactive programming.
 
 Please refer to the codebase and documentation for more detailed information on each feature.

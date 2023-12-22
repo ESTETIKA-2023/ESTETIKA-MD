@@ -11,7 +11,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit23.estetika.adapter.TourismAdapter
 import com.bangkit23.estetika.data.Resources
 import com.bangkit23.estetika.databinding.FragmentBatikDestinationBinding

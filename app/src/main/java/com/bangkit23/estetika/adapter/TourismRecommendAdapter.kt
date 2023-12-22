@@ -4,10 +4,12 @@ import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkit23.estetika.data.model.BatikTourism
+import com.bangkit23.estetika.R
 import com.bangkit23.estetika.data.remote.response.FirestoreBatikTouristAttractionData
 import com.bangkit23.estetika.databinding.ItemTourismBinding
 import com.bumptech.glide.Glide
@@ -25,6 +27,16 @@ class TourismRecommendAdapter : ListAdapter<FirestoreBatikTouristAttractionData,
         holder.itemView.setOnClickListener {
             val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse(tourism.moreInfo))
             holder.itemView.context.startActivity(webIntent)
+        }
+        holder.itemView.findViewById<Button>(R.id.tvTourismBuy).setOnClickListener {
+            val whatsAppIntent = Intent(Intent.ACTION_VIEW)
+            // Replace with the country code and phone number of the shop
+            whatsAppIntent.data = Uri.parse(tourism.waLink)
+            if (whatsAppIntent.resolveActivity(holder.itemView.context.packageManager) != null) {
+                holder.itemView.context.startActivity(whatsAppIntent)
+            } else {
+                Toast.makeText(holder.itemView.context, "WhatsApp not installed.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

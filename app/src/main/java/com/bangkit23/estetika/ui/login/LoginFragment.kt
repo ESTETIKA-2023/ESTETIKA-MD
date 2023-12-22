@@ -1,7 +1,6 @@
 package com.bangkit23.estetika.ui.login
 
 import android.content.Intent
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -58,7 +57,6 @@ class LoginFragment : Fragment() {
             )
 
             loginButton.setOnClickListener {
-//                handleLogin()
                 handleSignIn()
             }
         }
@@ -100,33 +98,6 @@ class LoginFragment : Fragment() {
                         setLoadingState(false)
                     }
                 }
-            }
-        }
-    }
-
-    private fun handleLogin() {
-        val email = binding.edLoginEmail.text.toString()
-        val password = binding.edLoginPassword.text.toString()
-
-        viewModel.login(email, password) { succes ->
-            if (succes) {
-                Intent(requireContext(), MainActivity::class.java).also { intent ->
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                Toast.makeText(
-                    requireContext(),
-                    getString(R.string.login_success_message),
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                Snackbar.make(
-                    binding.root,
-                    getString(R.string.login_error_message),
-                    Snackbar.LENGTH_SHORT
-                ).show()
-
-                setLoadingState(false)
             }
         }
     }

@@ -8,5 +8,7 @@ data class BatikTourism(
     @get:PropertyName("More Info") @set:PropertyName("More Info") var moreInfo: String? = null,
     @get:PropertyName("Nama Atraksi") @set:PropertyName("Nama Atraksi") var name: String? = null,
     @get:PropertyName("Price") @set:PropertyName("Price") var price: String? = null,
-    @get:PropertyName("Province") @set:PropertyName("Province") var province: String? = null
+    @get:PropertyName("Province") @set:PropertyName("Province") var province: String? = null,
+    @get:PropertyName("wa") @set:PropertyName("wa") var wa: String? = null,
+    @get:PropertyName("wa_link") @set:PropertyName("wa_link") var waLink: String? = null
 )

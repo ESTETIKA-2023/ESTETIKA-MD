@@ -159,7 +159,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="0"
-        android:background="@color/transparent_blue"
+        android:background="#B2FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -19,7 +19,6 @@ import com.bangkit23.estetika.util.animateVisibility
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -55,7 +54,6 @@ class RegisterFragment : Fragment() {
             )
 
             signupButton.setOnClickListener {
-//                handleRegister()
                 handleRegistration()
             }
         }
@@ -94,33 +92,6 @@ class RegisterFragment : Fragment() {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    private fun handleRegister() {
-        val email = binding.edRegisterEmail.text.toString().trim()
-        val password = binding.edRegisterPassword.text.toString()
-
-        setLoadingState(true)
-
-        viewModel.register(email, password) { success ->
-            if (success) {
-                Toast.makeText(
-                    requireContext(),
-                    getString(R.string.registration_success),
-                    Toast.LENGTH_SHORT
-                ).show()
-
-                // Automatically navigate user back to the login page
-                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-            } else {
-                Snackbar.make(
-                    binding.root,
-                    getString(R.string.registration_error_message),
-                    Snackbar.LENGTH_SHORT
-                ).show()
-                setLoadingState(false)
             }
         }
     }

@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ProfileViewModel @Inject constructor(private val repository: AuthRepository) : ViewModel() {
-    fun logout() = repository.logout()
 
     fun saveAuthToken(token: String) {
         viewModelScope.launch {

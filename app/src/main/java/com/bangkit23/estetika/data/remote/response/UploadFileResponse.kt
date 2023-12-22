@@ -46,7 +46,9 @@ data class FirestoreBatikTouristAttractionData(
     @SerializedName("Province") var province: String? = null,
     @SerializedName("More Info") var moreInfo: String? = null,
     @SerializedName("Image") var image: String? = null,
-    @SerializedName("Location") var location: String? = null
+    @SerializedName("Location") var location: String? = null,
+    @SerializedName("wa") var wa: String? = null,
+    @SerializedName("wa_link") var waLink: String? = null
 ) : Parcelable
 
 @Parcelize

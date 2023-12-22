@@ -12,8 +12,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit23.estetika.adapter.ArticleAdapter
 import com.bangkit23.estetika.adapter.ShopAdapter
 import com.bangkit23.estetika.data.Resources
 import com.bangkit23.estetika.databinding.FragmentHomeBinding
@@ -22,7 +20,6 @@ import com.bangkit23.estetika.ui.auth.AuthActivity
 import com.bangkit23.estetika.ui.destination.BatikTourismActivity
 import com.bangkit23.estetika.ui.market.BatikShopActivity
 import com.bangkit23.estetika.ui.market.MarketViewModel
-import com.bangkit23.estetika.ui.scanresult.ScanResultActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -50,12 +47,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getAuthToken().observe(viewLifecycleOwner) { Token ->
-            if (Token != null) {
-                if (Token.isEmpty()) {
+        viewModel.getAuthToken().observe(viewLifecycleOwner) { authToken ->
+            if (authToken != null) {
+                if (authToken.isEmpty()) {
                     startActivity(Intent(requireContext(), AuthActivity::class.java))
                 } else {
-                    token = Token
+                    token = authToken
                 }
             } else {
                 startActivity(Intent(requireContext(), AuthActivity::class.java))

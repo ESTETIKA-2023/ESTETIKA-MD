@@ -2,7 +2,6 @@ package com.bangkit23.estetika.ui.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bangkit23.estetika.R
 import com.bangkit23.estetika.databinding.ActivityAuthBinding
 import dagger.hilt.android.AndroidEntryPoint
 

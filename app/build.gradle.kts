@@ -20,6 +20,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_BASE_URL", "\"https://estetika-api-gog3wvm4dq-et.a.run.app\"")
     }
 
     buildTypes {
@@ -57,9 +59,6 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("androidx.exifinterface:exifinterface:1.3.6")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("org.tensorflow:tensorflow-lite-support:0.4.1")
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
-    implementation("org.tensorflow:tensorflow-lite-gpu:2.13.0")
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
@@ -84,7 +83,6 @@ dependencies {
 
     // See https://firebase.google.com/docs/android/setup#available-libraries
     // For example, add the dependencies for Firebase Authentication and Cloud Firestore
-    implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
 
     // Glide
